@@ -1,0 +1,33 @@
+#mainContainer{
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+   
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+
+}
+
+button{
+    height: 50px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+input{
+    height: 100px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+#c{
+    background: #f74952;
+    color: antiquewhite;
+}
+
+#result{
+    background: #44a4f1;
+    color: antiquewhite;
+
+}
