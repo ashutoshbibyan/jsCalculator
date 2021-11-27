@@ -5,24 +5,28 @@
    
     width: 500px;
     height: 500px;
-    border: 2px solid black;
+    border: grey solid 2px;
 
 }
 
 button{
     height: 50px;
-    margin: 5px;
-    font-weight: bolder;
+    margin: 10px;
+    font-size: larger;
+    border: grey solid 1px;
 }
 
 input{
     height: 100px;
     grid-column-start: 1;
     grid-column-end: 5;
+    border-radius: 5px;
+    border: grey solid 1px;
+    margin: 10px;
 }
 
 #c{
-    background: #f74952;
+    background: #eb444d;
     color: antiquewhite;
 }
 

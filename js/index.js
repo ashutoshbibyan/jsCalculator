@@ -53,7 +53,7 @@ jQuery(function(){
 
     $("#result").on("click" , function(){
         calculate();
-        inputCalObj.val("Result =" + result);
+        inputCalObj.val("Result = " + result);
 
     });
 
@@ -76,29 +76,29 @@ jQuery(function(){
  
     function bracketSolver(str){
 
-        console.log("eq " + str);
+     //   console.log("eq " + str);
 
         while(str.includes("(")){
 
             var openingBracket = str.lastIndexOf("(");
 
-            console.log("opening bracket Index" + openingBracket);
+           // console.log("opening bracket Index" + openingBracket);
 
             var closingBracket = str.indexOf(")",openingBracket);
 
-            console.log("closing bracket index" + closingBracket);
+            // console.log("closing bracket index" + closingBracket);
 
             var bracketString = str.substring(openingBracket+1 ,closingBracket);
 
-            console.log("bracket String " + bracketString);
+            // console.log("bracket String " + bracketString);
 
            var solvedBracket =  minusSolver(addSolver(multiplySolver(divisionSolver(bracketString))));
 
-           console.log("solved bracket "  + solvedBracket);
+           // console.log("solved bracket "  + solvedBracket);
 
            str = str.substring(0,openingBracket)+solvedBracket+str.substring(closingBracket+1);
 
-           console.log("new bracket string " + str);
+           // console.log("new bracket string " + str);
 
         }
 
@@ -118,24 +118,24 @@ jQuery(function(){
 
             var result = parseFloat(firstNo)+parseFloat(secondNo);
 
-            console.log("first no " + firstNo);
-            console.log("second no" + secondNo);
+            // console.log("first no " + firstNo);
+            // console.log("second no" + secondNo);
 
-            console.log("last index" + lastIndex);
+            // console.log("last index" + lastIndex);
             var cutStart = lastIndex-firstNo.length;
             var cutEnd = lastIndex+secondNo.length;
 
-            console.log("cutStart" + cutStart);
-            console.log("cutend" + cutEnd);
+            // console.log("cutStart" + cutStart);
+            // console.log("cutend" + cutEnd);
 
-            console.log("old string" + str);
+            // console.log("old string" + str);
 
             str = str.substring(0,cutStart)+result+str.substr(cutEnd+1);
             
 
-            console.log("new string " + str);
+            // console.log("new string " + str);
 
-            console.log("result" + result);
+            // console.log("result" + result);
 
        }
 
@@ -156,24 +156,24 @@ jQuery(function(){
 
          var result = parseFloat(firstNo)-parseFloat(secondNo);
 
-         console.log("first no " + firstNo);
-         console.log("second no" + secondNo);
+         // console.log("first no " + firstNo);
+         // console.log("second no" + secondNo);
 
-         console.log("last index" + lastIndex);
+         // console.log("last index" + lastIndex);
          var cutStart = lastIndex-firstNo.length;
          var cutEnd = lastIndex+secondNo.length;
 
-         console.log("cutStart" + cutStart);
-         console.log("cutend" + cutEnd);
+         // console.log("cutStart" + cutStart);
+         // console.log("cutend" + cutEnd);
 
-         console.log("old string" + str);
+         // console.log("old string" + str);
 
          str = str.substring(0,cutStart)+result+str.substr(cutEnd+1);
          
 
-         console.log("new string " + str);
+         // console.log("new string " + str);
 
-         console.log("result" + result);
+         // console.log("result" + result);
 
     }
 
@@ -193,24 +193,24 @@ function multiplySolver(str){
 
          var result = parseFloat(firstNo)*parseFloat(secondNo);
 
-         console.log("first no " + firstNo);
-         console.log("second no" + secondNo);
+         // console.log("first no " + firstNo);
+         // console.log("second no" + secondNo);
 
-         console.log("last index" + lastIndex);
+         // console.log("last index" + lastIndex);
          var cutStart = lastIndex-firstNo.length;
          var cutEnd = lastIndex+secondNo.length;
 
-         console.log("cutStart" + cutStart);
-         console.log("cutend" + cutEnd);
+         // console.log("cutStart" + cutStart);
+         // console.log("cutend" + cutEnd);
 
-         console.log("old string" + str);
+         // console.log("old string" + str);
 
          str = str.substring(0,cutStart)+result+str.substr(cutEnd+1);
          
 
-         console.log("new string " + str);
+         // console.log("new string " + str);
 
-         console.log("result" + result);
+         // console.log("result" + result);
 
     }
 
@@ -233,24 +233,24 @@ function divisionSolver(str){
 
          var result = parseFloat(firstNo)/parseFloat(secondNo);
 
-         console.log("first no " + firstNo);
-         console.log("second no" + secondNo);
+         // console.log("first no " + firstNo);
+         // console.log("second no" + secondNo);
 
-         console.log("last index" + lastIndex);
+         // console.log("last index" + lastIndex);
          var cutStart = lastIndex-firstNo.length;
          var cutEnd = lastIndex+secondNo.length;
 
-         console.log("cutStart" + cutStart);
-         console.log("cutend" + cutEnd);
+         // console.log("cutStart" + cutStart);
+         // console.log("cutend" + cutEnd);
 
-         console.log("old string" + str);
+         // console.log("old string" + str);
 
          str = str.substring(0,cutStart)+result+str.substr(cutEnd+1);
          
 
-         console.log("new string " + str);
+         // console.log("new string " + str);
 
-         console.log("result" + result);
+         // console.log("result" + result);
     }
 
     return str ;
@@ -261,11 +261,11 @@ function divisionSolver(str){
         var noIndexStart = operatorIndex;
 
         do {
-            console.log("index" + noIndexStart);
+            // console.log("index" + noIndexStart);
             if(noIndexStart >= 0){
                 noIndexStart = noIndexStart - 1 ;
                 var character = str.charAt(noIndexStart); 
-                 console.log("character" + character);
+                 // console.log("character" + character);
             }
             else{
                 break;
@@ -278,7 +278,7 @@ function divisionSolver(str){
 
         var no = str.substring(noIndexStart , operatorIndex);
 
-        console.log(" no is" + no);
+        // console.log(" no is" + no);
         return no;
     }
 
@@ -286,14 +286,14 @@ function divisionSolver(str){
         var noIndexEnd = operatorIndex ;
 
         do{
-            console.log(" second no index"+noIndexEnd);
+            // console.log(" second no index"+noIndexEnd);
 
             
 
             if(noIndexEnd < str.length){
                 noIndexEnd = noIndexEnd+1;
                 var character = str.charAt(noIndexEnd);
-                console.log("character" + character);
+                // console.log("character" + character);
             }
             else{
                 break;
@@ -302,11 +302,11 @@ function divisionSolver(str){
         while(isNumeric(character));
 
        
-        console.log(" second no operatorIndex" +operatorIndex);
-        console.log(" second no noindex" + noIndexEnd);
+        // console.log(" second no operatorIndex" +operatorIndex);
+        // console.log(" second no noindex" + noIndexEnd);
         var no = str.substring(operatorIndex+1 , noIndexEnd);
 
-        console.log("second no is " + no);
+        // console.log("second no is " + no);
 
         return no;
     }
