@@ -53,7 +53,7 @@ jQuery(function(){
 
     $("#result").on("click" , function(){
         calculate();
-        inputCalObj.val("Result = " + result);
+        inputCalObj.val(result);
 
     });
 
